@@ -557,5 +557,5 @@
 
 .pngCursor {
   cursor: url("https://sweezy-cursors.com/wp-content/uploads/cursor/rick-and-morty-rick-sanchez-portal-gun/rick-and-morty-rick-sanchez-portal-gun-pointer-32x32.png"),
-    pointer;
+    auto;
 }

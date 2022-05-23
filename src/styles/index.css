@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: RMFont;
+  src: url("../fonts/RM.ttf");
+}
+
+@font-face {
+  font-family: binary;
+  src: url("../fonts/binchrt.ttf");
+}
