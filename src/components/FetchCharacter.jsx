@@ -1,4 +1,5 @@
 import { useQuery } from "urql";
+import ContentLoader from "react-content-loader";
 
 const CharacterQuery = `
 query GetCharacter($id: ID!) {
@@ -14,6 +15,23 @@ query GetCharacter($id: ID!) {
   }
 }
 `;
+const MyLoader = (props) => (
+  <ContentLoader
+    speed={2}
+    width={476}
+    height={268}
+    viewBox="0 0 476 200"
+    backgroundColor="#2a3343"
+    foregroundColor="#ecebeb"
+    {...props}
+  >
+    <rect x="0" y="26" rx="3" ry="3" width="216" height="14" />
+    <rect x="0" y="70" rx="3" ry="3" width="110" height="9" />
+    <rect x="0" y="109" rx="3" ry="3" width="110" height="9" />
+    <rect x="0" y="145" rx="3" ry="3" width="110" height="9" />
+    <rect x="0" y="176" rx="3" ry="3" width="110" height="9" />
+  </ContentLoader>
+);
 
 const FetchCharacter = ({ id }) => {
   const [{ fetching, data, error }] = useQuery({
@@ -22,7 +40,10 @@ const FetchCharacter = ({ id }) => {
   });
   if (fetching) {
     return (
-      <p className="font-RMFont text-white">Loading Character Num {id}...</p>
+      // <MyLoader />
+      <p className="font-RMFont text-2xl text-white">
+        Loading Character Num {id}...
+      </p>
     );
   } else if (error) {
     return (
