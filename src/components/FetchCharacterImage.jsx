@@ -28,7 +28,7 @@ const FetchCharacterImage = ({ id }) => {
         alt={characterImage.image}
       />
       <div className="">
-        <p className="fixed text-3xl text-white bg-black rounded-full px-1 pl-2 font-RMFont right-0">
+        <p className="fixed text-3xl text-white bg-black rounded-full px-1 pl-2 py-2 font-RMFont right-0">
           {id}
         </p>
       </div>
