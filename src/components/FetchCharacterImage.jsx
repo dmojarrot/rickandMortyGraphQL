@@ -27,8 +27,10 @@ const FetchCharacterImage = ({ id }) => {
         src={characterImage.image}
         alt={characterImage.image}
       />
-      <div>
-        <p className="fixed text-3xl text-white font-RMFont right-0">{id}</p>
+      <div className="">
+        <p className="fixed text-3xl text-white bg-black rounded-full px-1 pl-2 font-RMFont right-0">
+          {id}
+        </p>
       </div>
     </>
   );

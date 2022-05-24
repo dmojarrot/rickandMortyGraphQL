@@ -16,13 +16,12 @@ function App() {
   var [id, setId] = useState(1);
   return (
     <Provider value={client}>
-      <div className="m-0 p-0 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 h-screen pngCursor overflow-hidden">
+      <div className="p-0 m-0 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 h-screen pngCursor overflow-hidden">
         <Stars />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto rounded-lg backdrop-blur-lg">
-            <div className="backdrop-blur-sm overflow-hidden rounded-lg">
-              <div className="px-4 pb-5 sm:px-6"></div>
-              <div className="my-5 mx-auto flex justify-center sm:justify-start">
+        <div className="max-w-7xl mx-auto lg:px-8">
+          <div className="max-w-3xl mx-auto rounded-lg backdrop-blur-lg p-14 md:pt-10'">
+            <div className="backdrop-blur-sm shadow-2xl overflow-hidden rounded-lg">
+              <div className="mx-auto flex justify-center sm:justify-start">
                 <FetchCharacterImage id={id} />
               </div>
               <div className="py-4">
@@ -35,6 +34,7 @@ function App() {
                         setId(id--);
                       }}
                       disabled={id === 1}
+                      type="button"
                     >
                       <ChevronLeftIcon className="text-white h-8 w-8" />
                     </button>
@@ -45,6 +45,7 @@ function App() {
                       onClick={() => {
                         setId(id++);
                       }}
+                      type="button"
                     >
                       <ChevronRightIcon className="text-white h-8 w-8" />
                     </button>
