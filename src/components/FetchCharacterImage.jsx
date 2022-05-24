@@ -16,7 +16,11 @@ const FetchCharacterImage = ({ id }) => {
   if (fetching) {
     return;
   } else if (error) {
-    return `Oh no! Error: ${error}`;
+    return (
+      <p className="font-RMFont text-white">
+        Oh no, error, try refreshing. {error}
+      </p>
+    );
   }
   const characterImage = data.character;
 
@@ -27,8 +31,8 @@ const FetchCharacterImage = ({ id }) => {
         src={characterImage.image}
         alt={characterImage.image}
       />
-      <div className="">
-        <p className="fixed text-3xl text-white bg-black rounded-full px-1 pl-2 py-2 font-RMFont right-0">
+      <div>
+        <p className="fixed text-3xl text-white bg-gray-600 rounded-full pl-1 mr-5 font-RMFont right-0">
           {id}
         </p>
       </div>
