@@ -24,6 +24,7 @@ const MyLoader = (props) => (
 );
 
 const FetchCharacterImage = ({ id }) => {
+  console.log(id);
   const [{ fetching, data, error }] = useQuery({
     query: CharacterImageQuery,
     variables: { id },

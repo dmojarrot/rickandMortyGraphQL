@@ -37,7 +37,7 @@ function App() {
                 <button
                   className="sm:w-auto w-full px-10 rounded-md py-1 shadow-inner shadow-white bg-gray-800 disabled:hover:opacity-100 disabled:bg-gray-600 hover:opacity-50 sm:block flex justify-center"
                   onClick={() => {
-                    setId(id--);
+                    setId(id - 1);
                   }}
                   disabled={id === 1}
                   type="button"
@@ -49,7 +49,7 @@ function App() {
                 <button
                   className="sm:w-auto w-full px-10 shadow-inner shadow-white rounded-md py-1 bg-gray-800 hover:opacity-50 sm:block flex justify-center"
                   onClick={() => {
-                    setId(id++);
+                    setId(id + 1);
                   }}
                   type="button"
                 >
