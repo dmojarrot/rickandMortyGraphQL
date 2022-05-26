@@ -38,6 +38,7 @@ const FetchCharacterImage = ({ id }) => {
       </p>
     );
   }
+
   const characterImage = data.character;
 
   return (
